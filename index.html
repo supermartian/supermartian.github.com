@@ -1,1 +1,58 @@
-Hello Page
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="lib/style.css" type="text/css" media="screen" />
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script type="text/javascript" src="lib/markdown.js"></script>
+<script type="text/javascript">
+function goPost(url) {
+    $.get(url, function(data){
+        $("#content").html(markdown.toHTML(data));
+    }, 'html');
+}
+$(function(){
+    function getPosts(catagory) {
+        var catagory_post_json = "posts/" + catagory + "/list.json";
+        $.getJSON(catagory_post_json, function(data) {
+            var list_cata_html = new Array(); 
+            $.each(data.posts, function(item){
+                var name = data.posts[item].name;
+                var url = data.posts[item].url;
+                var date = data.posts[item].date;
+                list_cata_html.push("<li><a href=\"#\" onClick=\"goPost('"+ url +"')\">" + name + "</a></li>");
+            });
+            $("#content_list").append(list_cata_html.join(""));
+        });
+    }
+
+    $.getJSON('data/catagory.json', function(data) {
+        var list_html = new Array();
+        var post_list_html = new Array(); 
+        $.each(data.catagory, function(item){
+            var name = data.catagory[item].name;
+            var url = data.catagory[item].url;
+            list_html.push("<li><a href=\"#\" onClick=\"goCatagory('"+ url +"')\">" + name + "</a></li>");
+            getPosts(name);
+        });
+        $("#catagory_list").append(list_html.join(""));
+    });
+});
+</script>
+</head>
+<body>
+<div id="header"><a href="/">Martian Workshop</a></div>
+<div id="content">
+    Posts:
+    <ul id="content_list">
+    </ul>
+</div>
+<div id="catagory">
+    <span>Catagories:</span>
+    <ul id="catagory_list">
+    </ul>
+</div>
+<center>
+<div id="footer">Martian Workshop @ 2013</div>
+</center>
+</body>
+</html>

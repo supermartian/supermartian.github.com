@@ -1,0 +1,36 @@
+#header {
+    height: 50px;
+    font-size: 40px;
+    margin: -8px;
+    padding: 5px 5px 5px 200px;
+    color: #aaa;
+    background: #333333;
+}
+
+#header a {
+    color: #aaa;
+    text-decoration:none;
+}
+
+#content {
+    padding-left: 200px;
+    margin-top: 90px;
+    font-size: 20px;
+}
+
+#catagory {
+    margin-right: -8px;
+    padding-left: 200px;
+    margin-top: 90px;
+    font-size: 20px;
+}
+
+#catagory_list li {
+    font-size: 16px;
+}
+
+#footer {
+    font-size: 14px;
+    width: 400px;
+    border: 1px solid #000;
+}
