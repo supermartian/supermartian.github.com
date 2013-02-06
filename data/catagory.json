@@ -1,10 +1,10 @@
 {
 "catagory": [
 {"name": "Linux",
- "url": "posts/linux"},
+ "url": "posts/Linux"},
 {"name": "Network",
- "url": "posts/network"},
+ "url": "posts/Network"},
 {"name": "Life",
- "url": "posts/life"} 
+ "url": "posts/Life"} 
 ]
 }
