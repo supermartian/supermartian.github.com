@@ -25,13 +25,14 @@
 </style>
 <script type="text/javascript" src="/lib/js/jquery.js"></script>
 <script type="text/javascript" src="/lib/js/markdown.js"></script>
+<title>Linux</title>
 </head>
 <body>
 <div class="main-container">
     <div class="navbar">
         <div class="container">
         <div class="navbar-inner">
-        <a class="brand" href="/index.html">Martian Workshop</a>
+        <a class="brand" href="index.html">Martian Workshop</a>
         <ul class="nav pull-right">
             <li><a href="#">About Me</a></li>
         </ul>
@@ -44,19 +45,22 @@
     </div>
     <div class="span8">
     <div id="content" class="span6">
-        <h3>Posts:</h3>
+        <h2>Posts:</h2>
+        <h3>Linux</h3>
         <ul id="content_list">
-            <TMPL_LOOP NAME=POSTS>
-            <li><a href="<TMPL_VAR NAME=POST_LINK>"><TMPL_VAR NAME=POST_TITLE></a></li>
-            </TMPL_LOOP>
+            
+            <li><a href="/blog/Linux/1.html">Queen of Blade </a></li>
+            
         </ul>
     </div>
     <div id="catagory" class="span6">
         <h3>Catagories:</h3>
         <ul id="catagory_list">
-            <TMPL_LOOP NAME=CATAGORIES>
-            <li><a href="<TMPL_VAR NAME=CATA_LINK>"><TMPL_VAR NAME=CATA_NAME></a></li>
-            </TMPL_LOOP>
+            
+            <li><a href="/blog/Linux">Linux</a></li>
+            
+            <li><a href="/blog/Life">Life</a></li>
+            
         </ul>
     </div>
     </div>

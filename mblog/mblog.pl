@@ -10,8 +10,8 @@ my @catagories;
 
 cata_list();
 #dump_post();
+render_index();
 render_catagory(); 
-#render_index();
 render_post();
 
 sub dump_post {
@@ -31,7 +31,7 @@ sub cata_list {
         my %row_data = ();
         if ($_ ne '.' and $_ ne '..') {
             $row_data{"CATA_NAME"} = $_;
-            $row_data{"CATA_LINK"} = "blog/".$_;
+            $row_data{"CATA_LINK"} = "/blog/".$_;
             post_list($_);
             push(@catagories, \%row_data);
         }
@@ -69,7 +69,7 @@ sub post_list {
             $post_data{"POST_CATAGORY"} = $cata;
             $file =~ s/.md/.html/;
             $file =~ s/posts\///;
-            $post_data{"POST_LINK"} = "blog/$file";
+            $post_data{"POST_LINK"} = "/blog/$file";
             push(@posts, \%post_data);
 
             close FILE;
@@ -89,7 +89,10 @@ sub render_index {
     }
     $templ->param(POSTS => \@index_posts);
     $templ->param(CATAGORIES => \@catagories);
-    print $templ->output();
+
+    open INDEX, ">index.html";
+    print INDEX $templ->output();
+    close INDEX;
 }
 
 sub render_catagory {
@@ -107,9 +110,13 @@ sub render_catagory {
         $templ->param(CATA_NAME => $cata->{"CATA_NAME"});
         $templ->param(POSTS => \@index_posts);
         $templ->param(CATAGORIES => \@catagories);
-#        print $templ->output();
 
+        rmdir "blog/".$cata->{"CATA_NAME"};
         mkdir "blog/".$cata->{"CATA_NAME"};
+        my $link = ".".$cata->{"CATA_LINK"}."/index.html";
+        open CATAGORY, ">$link";
+        print CATAGORY $templ->output();
+        close CATAGORY;
     }
 }
 
@@ -121,8 +128,8 @@ sub render_post {
         $templ->param(POST_CONTENT => $post->{"POST_CONTENT"});
         $templ->param(CATAGORIES => \@catagories);
 
-        my $oo = $post->{POST_LINK};
-        open POST, ">$oo";
+        my $link = ".".$post->{"POST_LINK"};
+        open POST, ">$link";
         print POST $templ->output();
         close POST;
     }
