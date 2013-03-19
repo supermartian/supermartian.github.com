@@ -31,9 +31,6 @@ function goPost(url) {
         $("#content").html(markdown.toHTML(data));
     }, 'html');
 }
-function goCatagory(url) {
-    $.get()
-}
 $(function(){
     function getPosts(catagory) {
         var catagory_post_json = "posts/" + catagory + "/list.json";
@@ -62,6 +59,7 @@ $(function(){
     });
 });
 </script>
+<title><TMPL_VAR NAME=CATA_NAME></title>
 </head>
 <body>
 <div class="main-container">
@@ -81,13 +79,20 @@ $(function(){
     </div>
     <div class="span8">
     <div id="content" class="span6">
-        <h3>Posts:</h3>
+        <h2>Posts:</h2>
+        <h3><TMPL_VAR NAME=CATA_NAME></h3>
         <ul id="content_list">
+            <TMPL_LOOP NAME=POSTS>
+            <li><a href="<TMPL_VAR NAME=POST_LINK>"><TMPL_VAR NAME=POST_TITLE></a></li>
+            </TMPL_LOOP>
         </ul>
     </div>
     <div id="catagory" class="span6">
         <h3>Catagories:</h3>
         <ul id="catagory_list">
+            <TMPL_LOOP NAME=CATAGORIES>
+            <li><a href="<TMPL_VAR NAME=CATA_LINK>"><TMPL_VAR NAME=CATA_NAME></a></li>
+            </TMPL_LOOP>
         </ul>
     </div>
     </div>
