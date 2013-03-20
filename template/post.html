@@ -24,10 +24,11 @@
 }
 </style>
 <script type="text/javascript" src="/lib/js/jquery.js"></script>
-<script type="text/javascript" src="/lib/js/markdown.js"></script>
+<script type="text/javascript" src="/lib/js/showdown.js"></script>
 <script type="text/javascript">
 $(function(){
-    $("#content").html(markdown.toHTML($("#content").html()));
+    var converter = new Showdown.converter;
+    $('#content').html(converter.makeHtml($("#content").html()));
 });
 </script>
 <title><TMPL_VAR NAME=POST_TITLE></title>

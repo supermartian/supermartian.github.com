@@ -1,6 +1,5 @@
 #!/usr/bin/perl -w
 BEGIN { unshift (@INC, "mblog/lib")};
-print @INC;
 use HTML::Template;
 use strict;
 my $index_tmpl = './template/index.html';
