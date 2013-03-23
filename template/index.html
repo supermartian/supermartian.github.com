@@ -25,6 +25,7 @@
 </style>
 <script type="text/javascript" src="/lib/js/jquery.js"></script>
 <script type="text/javascript" src="/lib/js/markdown.js"></script>
+<title>Martian Workshop</title>
 </head>
 <body>
 <div class="main-container">
@@ -47,7 +48,7 @@
         <h3>Posts:</h3>
         <ul id="content_list">
             <TMPL_LOOP NAME=POSTS>
-            <li><a href="<TMPL_VAR NAME=POST_LINK>"><TMPL_VAR NAME=POST_TITLE></a></li>
+            <li><a href="<TMPL_VAR NAME=POST_LINK>"><TMPL_VAR NAME=POST_TITLE></a>  [<TMPL_VAR NAME=POST_DATE>]</li>
             </TMPL_LOOP>
         </ul>
     </div>

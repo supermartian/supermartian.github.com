@@ -86,6 +86,7 @@ sub render_index {
         my %index_post;
         $index_post{"POST_LINK"} = $_->{"POST_LINK"};
         $index_post{"POST_TITLE"} = $_->{"POST_TITLE"};
+        $index_post{"POST_DATE"} = $_->{"POST_DATE"};
         push (@index_posts, \%index_post);
     }
     $templ->param(POSTS => \@index_posts);
@@ -105,6 +106,7 @@ sub render_catagory {
             if ($_->{"POST_CATAGORY"} eq $cata->{"CATA_NAME"}) {
                 $index_post{"POST_LINK"} = $_->{"POST_LINK"};
                 $index_post{"POST_TITLE"} = $_->{"POST_TITLE"};
+                $index_post{"POST_DATE"} = $_->{"POST_DATE"};
                 push (@index_posts, \%index_post);
             }
         }
