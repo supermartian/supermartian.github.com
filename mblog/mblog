@@ -38,7 +38,7 @@ sub cata_list {
         }
     }
     close CATA_DIR;
-    @posts = sort {$a->{"POST_DATE"} cmp $b->{"POST_DATE"}} @posts;
+    @posts = sort {$b->{"POST_DATE"} cmp $a->{"POST_DATE"}} @posts;
 }
 
 sub post_list {
