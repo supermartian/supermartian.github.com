@@ -31,7 +31,7 @@ $(function(){
     $('#content').html(converter.makeHtml($("#content").html()));
 });
 </script>
-<title>Martian Workshop - Long time no blog </title>
+<title>Martian Workshop - Enable tunnel device support on OSX</title>
 </head>
 <body>
 <div class="main-container">
@@ -47,15 +47,26 @@ $(function(){
     </div>
     <div class="row main-content">
     <div class="span10">
-    <h2>Long time no blog </h2>
-    <h4>2013-03-23</h4>
+    <h2>Enable tunnel device support on OSX</h2>
+    <h4>2013-12-11</h4>
     <div id="content" class="span10">
         
-  已经很久没有写博客了，某次受小胖的[org-blog](https://github.com/crackcell/org-blog)的启发，突然想自己也捣鼓一个静态博客生成的工具，用markdown写博客内容，于是就有了现在这个东西。一来是确实有东西想写写了，二来练一练前端和Perl。还有很多没弄好的，比如样式还很丑（= =|||）。慢慢改进先……
+Ever since I've bought my Macbook Pro, shit things never stop happening.
 
-  想想上次写blog还是在差不多快1年半前了，那时候还在用Godaddy的空间，把wordpress跟REICN的空间放在一起搭的。后来自己脑残，糟蹋了REICN，也糟蹋了自己的博客。
+Recently I was working on [hans](https://github.com/supermartian/hans), which requires tun/tap support on the system. It is said to be supporting OSX, however after building from the source and run it as client on my Mavericks, it goes "_Unable to open tunnel device, no such device._:". 
 
-  不知道我脑残还有没有救，就看这个博客能写多久了。
+On Linux, the tun/tap device driver is integrated, so I thought that OSX had it integrated too, and this error prompt could be something wrong *EXCEPT* the tun/tap device driver's problem. After googling the error output for a long time without any useful information, it turns out this can only be the problem of tun/tap device driver.
+
+Just a simple command solved my problem:
+
+    brew install tuntap
+
+After a reboot, I can finally use hans on my Mac.
+
+#### External links
+
+1. [hans the original](http://code.gerade.org/hans/)
+2. [tuntaposx](http://tuntaposx.sourceforge.net)
 
     </div>
     <div id="catagory" class="span10">
