@@ -1,0 +1,99 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="/lib/css/bootstrap.min.css" type="text/css" media="screen" />
+<style type="text/css">
+.main-container {
+    margin:0 auto;
+    width: 900px;
+}
+.main-content {
+    width: 900px;
+    margin:0 auto;
+}
+.sticker {
+    width: 100px;
+    height: 100px;
+}
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 70px;
+    border-top: 1px solid #e5e5e5;
+    background-color: #f5f5f5;
+}
+</style>
+<script type="text/javascript" src="/lib/js/jquery.js"></script>
+<script type="text/javascript" src="/lib/js/showdown.js"></script>
+<script type="text/javascript">
+$(function(){
+    var converter = new Showdown.converter;
+    $('#content').html(converter.makeHtml($("#content").html()));
+});
+</script>
+<title>Martian Workshop - 我的意中人</title>
+</head>
+<body>
+<div class="main-container">
+    <div class="navbar">
+        <div class="container">
+        <div class="navbar-inner">
+        <a class="brand" href="/index.html">Martian Workshop</a>
+        <ul class="nav pull-right">
+            <li><a href="#">About Me</a></li>
+            <li><a href="/resume.html">Resume</a></li>
+        </ul>
+        </div>
+        </div>
+    </div>
+    <div class="row main-content">
+    <div class="span10">
+    <h2>我的意中人</h2>
+    <h4>2014-04-23</h4>
+    <div id="content" class="span10">
+        
+我的意中人是个魔女，总有一天她会骑着扫把破窗而入帮我扫地。
+
+我的意中人是个美少女战士，总有一天她会带着月光头箍从天而降跳到阳台上变身给我看。
+
+我的意中人是个灰姑娘，总有一天她会在夜里12点一瘸一拐地走到我面前对我说不好意思来晚了半路上鞋掉了。
+
+我的意中人是个蛇妖，总有一天她会带着一锅七彩葫芦煲来我家参加Party。
+
+我的意中人是个驾驶员，总有一天她会在坐上EVA前10分钟冲过来问我战斗服背后的拉链有没有拉好。
+
+我的意中人在月亮上，总有一天她会在桂树下等到载有我的那艘飞船。
+
+    </div>
+    <div id="catagory" class="span10">
+        <h3>Catagories:</h3>
+        <ul id="catagory_list">
+            
+            <li><a href="/blog/Life">Life</a></li>
+            
+            <li><a href="/blog/Linux">Linux</a></li>
+            
+            <li><a href="/blog/Mac">Mac</a></li>
+            
+        </ul>
+    </div>
+    <div id="disqus_thread" class="span10"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'martianworkshop'; // required: replace example with your forum shortname
+        var disqus_identifier = window.location.href;
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+    </div>
+    <div class="footer">Martian Workshop @ 2013</div>
+</div>
+</body>
+</html>
