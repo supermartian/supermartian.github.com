@@ -1,0 +1,99 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="/lib/css/bootstrap.min.css" type="text/css" media="screen" />
+<style type="text/css">
+.main-container {
+    margin:0 auto;
+    width: 900px;
+}
+.main-content {
+    width: 900px;
+    margin:0 auto;
+}
+.sticker {
+    width: 100px;
+    height: 100px;
+}
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 70px;
+    border-top: 1px solid #e5e5e5;
+    background-color: #f5f5f5;
+}
+</style>
+<script type="text/javascript" src="/lib/js/jquery.js"></script>
+<script type="text/javascript" src="/lib/js/showdown.js"></script>
+<script type="text/javascript">
+$(function(){
+    var converter = new Showdown.converter;
+    $('#content').html(converter.makeHtml($("#content").html()));
+});
+</script>
+<title>Martian Workshop - 寒假结束</title>
+</head>
+<body>
+<div class="main-container">
+    <div class="navbar">
+        <div class="container">
+        <div class="navbar-inner">
+        <a class="brand" href="/index.html">Martian Workshop</a>
+        <ul class="nav pull-right">
+            <li><a href="#">About Me</a></li>
+            <li><a href="/dl/resume.pdf">Resume</a></li>
+        </ul>
+        </div>
+        </div>
+    </div>
+    <div class="row main-content">
+    <div class="span10">
+    <h2>寒假结束</h2>
+    <h4>2015-01-18</h4>
+    <div id="content" class="span10">
+        
+这个时候还在Union Station等回村子的车，索性总结一下回国的这个寒假好了。
+
+在美国的一年我一直觉得自己是时刻能跟得上国内潮流的，这次发现完全错了，现在的发展已经远远超出了我当时离开时候的状况。一个比较明显的变化是，从生活上，在国内人们越来越离不开智能机了。比如大家都开始使用打车软件叫出租车，包括各种专车；手机网购越来越多，连我爸都习惯了在手机淘宝上买东西；看电影完全不需要去现场买票，手机上可以直接选座位；甚至微信可以直接给港澳通行证续费。智能机已经深入生活的各个方面，人们似乎已经完全将其融入生活，各种各样新鲜的东西出现在手机上都不会有人感觉奇怪。另一个比较明显的变化是国产手机份额多到夸张。以前在地铁上看到苹果三星摩托罗拉居多，现在则清一色的苹果小米华为vivo，已经很难看到拿着三星手机的年轻人。一个重要的原因应该是国产机在性价比和外观上越来越精致，而相比之下国外品牌依然止步不前。比较一下小米3和华为荣耀的质感和三星常年的塑料味道，高下立判。另一个可能的原因也许是因为国产手机将本土化做到了极致，Android手机以前赖以生存的Google服务套件被封的情况下，国产厂商做出了比原生体验更好更接地气的套件，用户体验丝毫不会有问题。
+
+这里不得不谈一下美国的移动应用，得益于美国整体IT化的领先，一些公共服务的app体验非常不错。比如United的国内航班可以直接刷手机登机而无需纸质登机牌，Amtrak也提供类似的App。这些App具有良好的设计（比如Android的App基本完全按照Android UI设计指导实现），使用起来也相对稳定。反观国内的12306，我的Nexus 4装了之后根本无法打开。这是国内公共服务IT化的落后的一个体现，也许是因为不负责任的外包公司？（一定是体制问题）但在另一些方面，美国的app就存在显著差距，一个明显的感受是在美国没有看到像微信和支付宝这种平台性的应用。以支付为例，Paypal实际上并没有像支付宝这样和各个应用的集成度如此高，大部分的应用在支付问题上都是直接绑定信用卡了事。实际上这也造成非常大的安全隐患，我在美国的这一年就目睹了多次大型信用卡信息泄露的事件。不要说美国信用卡被盗刷可以找回来，这只是对于用户来说。在整体上从信用卡公司到商家到办案部门，一旦出了这样的事情，解决问题的开销还是非常大的。反观国内，12306都开始支持支付宝了，各类掌上支付过程不可谓不方便。另一个例子是手机上的IM应用，美国在这方面也是一团浆糊。目前来看是以Facebook的Messenger为主，而让我没想到的是除此之外最大的即时信息应用竟然是短信和彩信。一个明显的例子是iOS平台上的iMessenger，直接统领了iOS上的IM，与此同时带动了其他平台上短信的发展（比如iOS用户向Android用户发信息，则会走短信或彩信而不是iMessenger）。另一个例子是初创公司Twilio，这个公司提供了一套API，使得开发者可以搭建一个短信电话平台，比如发短信到某个指定号码，API可以接受短信并做出响应。等等，这不就是中国十几年前的SP服务么？再等等，这个不就是现在微信的公众平台么？在中国已经无人问津的短信业务，在美国却大有市场，这点正好说明了美国在移动端IM市场缺乏一个像微信这样统领大局的应用，导致短信这种原始而稳定的业务占到了极大份额。另一个点，美国在移动互联网上，倾向于做一些小而精的东西，专注于一个功能（UNIX哲学？）。比如著名的约炮软件Tinder，就是把约炮这个过程精简到了极致，”喜欢“ or ”不喜欢“，就这么简单；反观国内默默，功能众多，虽然不至于繁琐但一个App的安装包也不小了。
+
+这次回国还喜欢上了小米手环这个东西，和Jawbone Up完全相同的功能，价钱却便宜了好几倍，让人不得不敬佩小米的成本控制和制作工艺。BLE的应用，加上无屏幕设计，让这个小东西充一次电能用30天。不过用惯了Pebble的我，时不时还是会抬起戴着手环的那只手手来看时间……
+
+先写这么多，回头再补充
+
+    </div>
+    <div id="catagory" class="span10">
+        <h3>Catagories:</h3>
+        <ul id="catagory_list">
+            
+            <li><a href="/blog/Life">Life</a></li>
+            
+            <li><a href="/blog/Linux">Linux</a></li>
+            
+            <li><a href="/blog/Mac">Mac</a></li>
+            
+            <li><a href="/blog/Nodejs">Nodejs</a></li>
+            
+        </ul>
+    </div>
+    <div id="disqus_thread" class="span10"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'martianworkshop'; // required: replace example with your forum shortname
+        var disqus_identifier = window.location.href;
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+    </div>
+    <div class="footer">Martian Workshop @ 2013</div>
+</div>
+</body>
+</html>
